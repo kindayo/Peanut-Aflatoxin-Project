@@ -6,7 +6,7 @@ library(data.table)
 data <-read.csv("C:\\Users\\da94_\\OneDrive - University of Florida\\PEANUT PROJECT\\irrigation_Model_DK.csv", header = T)
 names(data) <-c('Date', 'Day', 'MinT', 'MaxT', 'Water', 'ET')
 AWC <- 0.1
-
+data$AWC <-0.1
 head(data)
 data <- data %>% 
   mutate(data, DailyGDD = (data$MinT + data$MaxT) / 2 - 13.3,
